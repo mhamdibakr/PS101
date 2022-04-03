@@ -92,6 +92,21 @@ public class Loops
         System.out.println("Sum of even number is "+sumEven);
         System.out.println("Sum of odd number is "+sumOdd);
     }
+
+    public static void HCF(int num1, int num2)
+    {
+        int dividend = num1,  divisor  = num2, hcf;
+
+        do
+        {
+            int res = dividend % divisor;
+
+                hcf = divisor;
+                dividend = divisor;
+                divisor = res;
+        }while (divisor != 0);
+        System.out.println("The HCF of "+num1+" and "+num2+" is "+hcf);
+    }
     public static void prePost()
     {
         int i = 0 ;
