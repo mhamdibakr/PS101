@@ -218,6 +218,21 @@ public class Loops
             System.out.println("it's not an armstrong number");
     }
 
+    public static void fibonaci(int number)
+    {
+        int firstTerm = 0, secondTerm = 1, thirdTerm;
+        for(int i = 2; i <= number ; i++)
+        {
+            thirdTerm = secondTerm + firstTerm;
+            System.out.print(thirdTerm+" ");
+            firstTerm = secondTerm;
+            secondTerm = thirdTerm;
+            float res = (float) secondTerm / (float) firstTerm;
+        }
+
+
+    }
+
 
     public static void prePost()
     {
