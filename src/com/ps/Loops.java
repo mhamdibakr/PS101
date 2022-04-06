@@ -233,6 +233,16 @@ public class Loops
 
     }
 
+    public static void nSeries(int number)
+    {
+        float res = 1;
+        for(int i = 2; i <= number ; i++)
+        {
+            res += (float) 1/i;
+            System.out.println(res);
+        }
+    }
+
 
     public static void prePost()
     {
