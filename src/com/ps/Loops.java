@@ -243,6 +243,18 @@ public class Loops
         }
     }
 
+    public static void nSeries2(int number)
+    {
+        float res = 0;
+        int sign = 1;
+
+        for (int i = 1; i<=number ; i++)
+        {
+            res += (float) sign / i;
+            sign *= -1;
+        }
+    }
+
 
     public static void prePost()
     {
