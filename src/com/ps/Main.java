@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args)
     {
-        Loops.nSeries2(6);
+        Loops.guessTheNumber();
 
     }
 }

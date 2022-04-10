@@ -1,5 +1,6 @@
 package com.ps;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Loops
@@ -253,6 +254,34 @@ public class Loops
             res += (float) sign / i;
             sign *= -1;
         }
+    }
+
+    public static void guessTheNumber()
+    {
+        Scanner scanner = new Scanner(System.in);
+        Random rand = new Random();
+        int choice,tries = 0, co = rand.nextInt(20 - 1 + 1) + 1;;
+
+        do
+        {
+            System.out.println("Pick a number between 1 and 20");
+            choice = scanner.nextInt();
+            tries ++;
+         if(choice > co)
+         {
+             System.out.println("Too high");
+         }
+         else if (choice < co)
+         {
+             System.out.println("Too low");
+         }
+         else
+         {
+             System.out.println("Got it right mate in "+tries);
+         }
+
+
+        }while (choice != co);
     }
 
 
