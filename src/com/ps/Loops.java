@@ -49,14 +49,15 @@ public class Loops
             return num * factorialRec(num -1);
     }
 
-    public static  void powerOf(int n, int p)
+    public static  int powerOf(int n, int p)
     {
         int res = 1;
         for(int i = 1 ; i <= p ; i++)
         {
             res *= n;
         }
-        System.out.println(n+" powers "+p+" = "+res);
+        //System.out.println(n+" powers "+p+" = "+res);
+        return res;
     }
 
     public static void invertedNumber(int num)
@@ -284,6 +285,40 @@ public class Loops
         }while (choice != co);
     }
 
+    public static void sin(int x, int n)
+    {
+        double res = x;
+        int sign = 1;
+        for(int i = 3 ; i <= n ; i = i + 2)
+        {
+            sign *= -1;
+           int factRes  = factorialRec(i) ;
+           int powerRes = powerOf(x,i);
+           res += (double) (sign *  powerRes) / (double) factRes;
+           System.out.println(sign*powerRes+" / "+factRes);
+        }
+        System.out.println(res);
+    }
+
+    public static void sinX(int x, int n)
+    {
+        int fact, sign = -1;
+        float  p, sum = 0;
+
+        for(int i = 1 ; i <= n ; i+=2)
+        {
+            p = 1; fact = 1;
+            for (int j = 1 ; j <= i ; j++)
+            {
+                p *= x;
+                fact *= j;
+            }
+
+            sign *= -1;
+            sum += sign * p / fact;
+        }
+        System.out.println(sum);
+    }
 
     public static void prePost()
     {

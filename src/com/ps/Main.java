@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args)
     {
-        Loops.guessTheNumber();
+        Loops.sin(1,10);
 
     }
 }
