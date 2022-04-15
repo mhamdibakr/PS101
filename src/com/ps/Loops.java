@@ -320,6 +320,28 @@ public class Loops
         System.out.println(sum);
     }
 
+    public static void cosX(int x, int n)
+    {
+        int fact, sign = -1;
+        float  p, sum = 0;
+
+        for(int i = 0 ; i <= n ; i+=2)
+        {
+            p = 1; fact = 1;
+            for (int j = 1 ; j <= i ; j++)
+            {
+                p *= x;
+                fact *= j;
+            }
+
+            sign *= -1;
+            sum += sign * p / fact;
+        }
+        System.out.println(sum);
+    }
+
+
+
     public static void prePost()
     {
         int i = 0 ;
