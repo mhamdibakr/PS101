@@ -236,6 +236,26 @@ public class Conditions {
             System.out.println(c+" isn't a vowel");
     }
 
+    public static boolean isPrime(int number)
+    {
+       // Boolean b = null;
+        for(int i = number - 1 ; i > 1 ; i--)
+        {
+            if(number % i == 0)
+                return false;
+        }
+        return true;
+    }
+
+    public static void isPrimePrint(int n)
+    {
+        for(int i = 2 ; i <= n ; i++)
+        {
+            if (isPrime(i))
+                System.out.println(i);
+        }
+    }
+
 
 
 }
