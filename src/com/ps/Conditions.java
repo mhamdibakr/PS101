@@ -228,5 +228,14 @@ public class Conditions {
         }
     }
 
+    public static void isVowel(char c)
+    {
+        if(c == 'a' || c == 'e' || c == 'o' || c == 'i' || c == 'y')
+            System.out.println(c+" is a vowel");
+        else
+            System.out.println(c+" isn't a vowel");
+    }
+
+
 
 }
