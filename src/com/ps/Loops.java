@@ -340,22 +340,7 @@ public class Loops
         System.out.println(sum);
     }
 
-    public static void isPalindrome(int n)
-    {
-        int rev = 0 , reminder , number;
-        number = n;
-        while (number > 0)
-        {
-            reminder = number % 10;
-            number /= 10 ;
-            rev = rev * 10 + reminder;
-        }
-        if(rev == n)
-            System.out.println("Number is palindrome");
-        else
-            System.out.println("Number isn't palindrome");
 
-    }
 
 
     public static void prePost()
