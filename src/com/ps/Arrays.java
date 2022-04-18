@@ -67,14 +67,34 @@ public class Arrays
         System.out.println("the smallest element of the array is "+sma+" and it index is "+indexSma);
     }
 
-    public static void copyArray(int[] array1, int[] array2)
-    {
-        for (int i = 0 ; i < array1.length ; i++)
-        {
+    public static void copyArray(int[] array1, int[] array2) {
+        for (int i = 0; i < array1.length; i++) {
             array2[i] = array1[i];
         }
     }
 
+    public static void reverseArray(int[] array)
+    {
+        // Must redo it later in order to build reflexion
+    }
 
+    public static void sortArray(int[] array)
+    {
+        int temp = 0;
+        int size = array.length - 1;
+        for(int i = 0 ; i < size ; i++)
+        {
+            for(int j = 0 ; j < size - i ;j++)
+            {
+               if(array[j] > array[j+1])
+               {
+                   temp = array[j];
+                   array[j] = array[j+1];
+                   array[j+1] = temp;
+               }
+            }
+        }
+        printArray(array);
+    }
 
 }

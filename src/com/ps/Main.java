@@ -7,15 +7,13 @@ public class Main {
         //Conditions.isPrimePrint(10);
         //Loops.isPalindrome(512215);
         String [] days = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" , "Saturday"};
-        int[] numArrays = new int[10];
-        Arrays.fillArray(numArrays,10);
+        int[] numArrays = {1 , 5 , 6 , 12 , 4 , 9};
+      //  Arrays.fillArray(numArrays,6);
         Arrays.printArray(numArrays);
         Arrays.sumArray(numArrays);
         Arrays.avgArray(numArrays);
         Arrays.largestAndSmallest(numArrays);
-        int[] array2 = new int[numArrays.length];
-        Arrays.copyArray(numArrays,array2);
-        Arrays.printArray(array2);
+        Arrays.sortArray(numArrays);
 
     }
 }
