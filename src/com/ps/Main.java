@@ -7,10 +7,14 @@ public class Main {
         //Conditions.isPrimePrint(10);
         //Loops.isPalindrome(512215);
         String [] days = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" , "Saturday"};
-        for (String day :days)
-        {
-            System.out.println(day);
-        }
+        int[] numArrays = new int[10];
+        Arrays.fillArray(numArrays,10);
+        Arrays.printArray(numArrays);
+        Arrays.sumArray(numArrays);
+        Arrays.avgArray(numArrays);
+        Arrays.largestAndSmallest(numArrays);
+        int[] array2 = numArrays;
+        Arrays.printArray(array2);
 
     }
 }
