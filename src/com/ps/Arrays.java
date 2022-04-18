@@ -67,6 +67,14 @@ public class Arrays
         System.out.println("the smallest element of the array is "+sma+" and it index is "+indexSma);
     }
 
+    public static void copyArray(int[] array1, int[] array2)
+    {
+        for (int i = 0 ; i < array1.length ; i++)
+        {
+            array2[i] = array1[i];
+        }
+    }
+
 
 
 }

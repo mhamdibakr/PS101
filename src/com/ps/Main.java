@@ -13,7 +13,8 @@ public class Main {
         Arrays.sumArray(numArrays);
         Arrays.avgArray(numArrays);
         Arrays.largestAndSmallest(numArrays);
-        int[] array2 = numArrays;
+        int[] array2 = new int[numArrays.length];
+        Arrays.copyArray(numArrays,array2);
         Arrays.printArray(array2);
 
     }
