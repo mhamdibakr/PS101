@@ -130,6 +130,7 @@ public class Arrays
             array3[array1.length+i]=array2[i];
         }
         printArray(array3);
+        sortArray(array3);
     }
 
 }
