@@ -97,4 +97,25 @@ public class Arrays
         printArray(array);
     }
 
+    public static void searchArray(int[] array, int element)
+    {
+        boolean isFound = false;
+        int index = 0;
+        System.out.println(array.length);
+        for (int i = 0 ; i < array.length ; i++ )
+        {
+            if(array[i] == element)
+            {
+                isFound = true;
+                index = i;
+                break;
+            }
+        }
+        if (isFound)
+            System.out.println("element is found in this array on index "+index);
+        else
+            System.out.println("element does not exist in the array");
+
+    }
+
 }

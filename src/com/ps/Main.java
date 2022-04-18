@@ -14,6 +14,7 @@ public class Main {
         Arrays.avgArray(numArrays);
         Arrays.largestAndSmallest(numArrays);
         Arrays.sortArray(numArrays);
+        Arrays.searchArray(numArrays,5);
 
     }
 }
