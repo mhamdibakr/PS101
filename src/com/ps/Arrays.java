@@ -177,4 +177,49 @@ public class Arrays
         }
         System.out.println("Sum of this arrays elements is "+sum);
     }
+
+    public static void leftDiagonal(int[][] array)
+    {
+        int diagSum = 0;
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            for (int j = 0 ; j < array[i].length ; j++)
+            {
+                if(i == j)
+                {
+                    System.out.print(array[i][j]+" ");
+                    diagSum += array[i][j];
+                }
+                else
+                    System.out.print("  ");
+            }
+            System.out.println();
+        }
+        System.out.println("The sum of the left diagonal is "+diagSum);
+    }
+
+    public static void rightDiagonal(int[][] array)
+    {
+        for(int i = array.length -1 ; i >= 0; i--)
+        {
+            for (int j = 0 ; j < array[i].length ; j++ )
+            {
+                System.out.print(array[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void Multi2Darray(int[][] array)
+    {
+        for (int i = 0 ; i < array.length ; i++)
+        {   int sum = 1;
+            for(int j = 0 ; j < array[i].length ; j++)
+            {
+                sum *= array[i][j];
+            }
+            int iindex = i + 1;
+            System.out.println("Product of line "+iindex+" is "+sum);
+        }
+    }
 }
