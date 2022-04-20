@@ -157,4 +157,24 @@ public class Arrays
             System.out.println();
         }
     }
+
+    public static void sum2DArray(int[][] array)
+    {
+        int sum = 0;
+        for(int i = 0 ; i < array.length; i++)
+        {
+            int lsum = 0;
+            int rsum = 0;
+            for (int j = 0 ; j < array[i].length; j++)
+            {
+                lsum += array[i][j];
+                rsum += array[j][i];
+                sum  += array[i][j];
+            }
+            int iindex = i + 1;
+            System.out.println("The sum of line "+ iindex + " is "+lsum);
+            System.out.println("The sum of col "+ iindex + " is "+rsum);
+        }
+        System.out.println("Sum of this arrays elements is "+sum);
+    }
 }

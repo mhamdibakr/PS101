@@ -13,6 +13,7 @@ public class Main {
         int[][] values = new int[3][3];
         Arrays.fill2DArray(values);
         Arrays.print2DArray(values);
+        Arrays.sum2DArray(values);
 
     }
 }
