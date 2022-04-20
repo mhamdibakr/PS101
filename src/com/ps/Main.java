@@ -15,7 +15,6 @@ public class Main {
         Arrays.print2DArray(values);
         //Arrays.sum2DArray(values);
         Arrays.rightDiagonal(values);
-        Arrays.Multi2Darray(values);
-
+        //Arrays.upperHalf(values);
     }
 }

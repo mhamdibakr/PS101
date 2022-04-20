@@ -200,14 +200,22 @@ public class Arrays
 
     public static void rightDiagonal(int[][] array)
     {
-        for(int i = array.length -1 ; i >= 0; i--)
+        int diagSum = 0;
+        for(int i = 0 ; i < array.length; i++)
         {
             for (int j = 0 ; j < array[i].length ; j++ )
             {
-                System.out.print(array[i][j]+" ");
+                if(i + j == 2)
+                {
+                    System.out.print(array[i][j]+" ");
+                    diagSum += array[i][j];
+                }
+                else
+                    System.out.print("  ");
             }
             System.out.println();
         }
+        System.out.println("The right diagonal sum is "+diagSum);
     }
 
     public static void Multi2Darray(int[][] array)
@@ -220,6 +228,21 @@ public class Arrays
             }
             int iindex = i + 1;
             System.out.println("Product of line "+iindex+" is "+sum);
+        }
+    }
+
+    public static void upperHalf(int[][] array)
+    {
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            for (int j = 0 ; j < array[i].length ; j++)
+            {
+                if(j >= i)
+                    System.out.print(array[i][j]+" ");
+                else
+                    System.out.print("  ");
+            }
+            System.out.println();
         }
     }
 }
