@@ -205,7 +205,7 @@ public class Arrays
         {
             for (int j = 0 ; j < array[i].length ; j++ )
             {
-                if(i + j == 2)
+                if(i + j == array.length - 1)
                 {
                     System.out.print(array[i][j]+" ");
                     diagSum += array[i][j];
@@ -243,6 +243,51 @@ public class Arrays
                     System.out.print("  ");
             }
             System.out.println();
+        }
+    }
+
+    public static void symetricMatrix(int[][] array1, int[][] array2)
+    {
+        boolean isSemetric = true;
+        if(array1.length != array2.length)
+        {
+            throw new RuntimeException("Both arrays size should be equal");
+        }
+        else
+        {
+            for(int i = 0 ;  i < array1.length ; i++)
+            {
+                for (int j = 0 ; j < array2.length ; j++)
+                {
+                    if (array1[i][j] !=  array2[i][j])
+                    {
+                        isSemetric = false;
+                        break;
+                    }
+                }
+            }
+            if(isSemetric)
+                System.out.println("Both arrays are semetric");
+            else
+                System.out.println("Arrays arent symetric");
+        }
+    }
+
+    public static void middleRowCol(int[][] array, int row)
+    {
+        if((row%2)!=0 ){
+            int midNumber = (row-1)/2;
+            System.out.println("Mid Row is");
+            for(int j = 0; j < array.length; j++)
+            {
+                System.out.print(array[midNumber][j]+ "  ");
+            }
+            System.out.println();
+            System.out.println("Mid Column is");
+            for(int j = 0; j < array.length; j++)
+            {
+                System.out.print(array[j][midNumber]+ "  ");
+            }
         }
     }
 }

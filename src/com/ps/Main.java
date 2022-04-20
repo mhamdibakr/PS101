@@ -11,10 +11,12 @@ public class Main {
         int[] array2 = {1,5,2};
 
         int[][] values = {{1,2,5},{7,4,3},{8,2,4}};
-       // Arrays.fill2DArray(values);
+
+        // Arrays.fill2DArray(values);
         Arrays.print2DArray(values);
-        //Arrays.sum2DArray(values);
-        Arrays.rightDiagonal(values);
+        Arrays.sum2DArray(values);
+        //Arrays.rightDiagonal(values);
         //Arrays.upperHalf(values);
+        Arrays.middleRowCol(values,values.length);
     }
 }
