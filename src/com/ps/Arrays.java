@@ -158,4 +158,43 @@ public class Arrays
         }
     }
 
+    public static void sum2DArray(int[][] array)
+    {
+        int sum = 0;
+        for (int i = 0 ; i < array.length ; i++)
+        {
+            int sumRow =0, sumCol = 0;
+            for (int j = 0 ; j < array[i].length ; j++)
+            {
+                sum += array[i][j];
+                sumRow += array[i][j];
+                sumCol += array[j][i];
+            }
+            System.out.println("sum of row "+ i +" : "+sumRow);
+            System.out.println("sum of col "+ i +" : "+sumCol);
+        }
+        System.out.println("sum of the whole array elemets is : "+sum);
+    }
+
+    public static void leftDiag(int[][] array)
+    {
+        int diagSum = 0;
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            for( int j = 0 ; j <array[i].length ; j++)
+            {
+                if(i == j)
+                {
+                    diagSum +=  array[i][j];
+                    System.out.print(array[i][j]);
+                }
+                else
+                    System.out.print("  ");
+            }
+            System.out.println();
+        }
+        System.out.println("The left diag sum is : "+diagSum);
+    }
+
+
 }

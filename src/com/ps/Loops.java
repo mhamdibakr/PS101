@@ -340,7 +340,27 @@ public class Loops
         System.out.println(sum);
     }
 
+    public static void magicNumber(int number)
+    {
+        int n = number, sum = 0, rest = 0;
+        while(n > 9)
+        {
+            while(n > 0)
+            {
+                if( n == 0)
+                {
+                    n = sum;
+                    sum = 0;
+                }
 
+                rest = n % 10 ;
+                sum += rest;
+                n /= 10 ;
+            }
+            n += sum;
+            sum = 0;
+        }
+    }
 
 
     public static void prePost()
