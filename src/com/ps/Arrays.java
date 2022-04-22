@@ -237,15 +237,22 @@ public class Arrays
 
     public static void matrixMultiplication(int[][] array, int[][] array2)
     {
-        int[][] array3 = new int[array.length][];
-        for(int i = 0 ; i < array.length ; i++)
-        {
-            for (int j = 0 ; j < array[i].length ; j++)
-            {
-                System.out.println(array[i][j]+" * "+array2[j][i]+" + ");
-            }
-        }
+        int[][] array3 = new int[2][2];
+
     }
 
-
+    public static void upperHalf(int[][] array)
+    {
+        for (int i = 0 ; i < array.length ; i++)
+        {
+            for(int j = 0 ; j < array[i].length ; j++)
+            {
+                if(j >= i)
+                    System.out.print(array[i][j]+" ");
+                else
+                    System.out.print("  ");
+            }
+            System.out.println();
+        }
+    }
 }
