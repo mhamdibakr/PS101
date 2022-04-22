@@ -196,5 +196,56 @@ public class Arrays
         System.out.println("The left diag sum is : "+diagSum);
     }
 
+    public static void rightDiag(int[][] array)
+    {
+        int diagSum = 0;
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            for( int j = 0 ; j <array[i].length ; j++)
+            {
+                if( i + j == 2 )
+                {
+                    diagSum +=  array[i][j];
+                    System.out.print(array[i][j]);
+                }
+                else
+                    System.out.print("  ");
+            }
+            System.out.println();
+        }
+        System.out.println("The right diag sum is : "+diagSum);
+    }
+
+    public static void rowMultiplication(int[][] array)
+    {
+        int pod = 1;
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            int podRow = 1;
+            int podCol = 1;
+            for (int j = 0 ; j < array[i].length ; j++)
+            {
+                pod *= array[i][j];
+                podRow *= array[i][j];
+                podCol *= array[j][i];
+            }
+            System.out.println("Product of row "+ i +" is "+podRow);
+            System.out.println("Product of col "+ i +" is "+podCol);
+        }
+        System.out.println("Product of the whole array is "+pod);
+    }
+
+    public static void matrixMultiplication(int[][] array, int[][] array2)
+    {
+        int[][] array3 = new int[array.length][];
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            for (int j = 0 ; j < array[i].length ; j++)
+            {
+                System.out.println(array[i][j]+" * "+array2[j][i]+" + ");
+            }
+        }
+    }
+
 
 }
