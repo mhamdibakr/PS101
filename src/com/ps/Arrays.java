@@ -237,8 +237,19 @@ public class Arrays
 
     public static void matrixMultiplication(int[][] array, int[][] array2)
     {
-        int[][] array3 = new int[2][2];
-
+        int[][] array3 = new int[3][2];
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            for(int j = 0 ; j < array2[i].length ; j++)
+            {
+                for (int k = 0 ; k < array2.length ; k++)
+                {
+                    //array3[i][j] += array[i][k] * array2[k][j];
+                    System.out.println("i = "+i+" , j = "+j+" , k = "+k);
+                }
+            }
+        }
+       // print2DArray(array3);
     }
 
     public static void upperHalf(int[][] array)
@@ -254,5 +265,33 @@ public class Arrays
             }
             System.out.println();
         }
+    }
+
+    public static void middleRow(int[][] array)
+    {
+        System.out.println("the middle row : ");
+        for (int i = 0 ; i < array.length ; i++)
+        {
+            for (int j = 0 ; j < array[i].length ; j++)
+            {
+                if(array.length / 2 == i)
+                    System.out.print(array[i][j]+" ");
+            }
+        }
+        System.out.println();
+    }
+
+    public static void middleCol(int[][] array)
+    {
+        System.out.println("the middle col : ");
+        for (int i = 0 ; i < array.length ; i++)
+        {
+            for (int j = 0 ; j < array[i].length ; j++)
+            {
+                if(array[i].length / 2 == j)
+                    System.out.print(array[i][j]+" ");
+            }
+        }
+        System.out.println();
     }
 }
