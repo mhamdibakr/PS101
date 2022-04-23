@@ -1,5 +1,7 @@
 package com.ps;
 
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args)
@@ -12,10 +14,14 @@ public class Main {
         int[][] values2 = {{5,6},{0,7}};
         int[][] array = {{1,2,3,5,3},{1,2,3,5,3},{1,2,3,5,3},{1,2,3,5,3},{1,2,3,5,3}};
 
+        ArrayList<String> Cars = new ArrayList<>();
+        Cars.add("Ford GM");
+        Cars.add("Bmw");
+        Cars.add("Mercedes");
 
-        Arrays.print2DArray(values);
-        Arrays.middleRow(values);
-        Arrays.middleCol(values);
+        Arrays.addElementToArrayList(Cars);
+
+        Arrays.printArrayList(Cars);
 
     }
 }

@@ -1,5 +1,6 @@
 package com.ps;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Arrays
@@ -293,5 +294,28 @@ public class Arrays
             }
         }
         System.out.println();
+    }
+    
+    public static void printArrayList(ArrayList<String> list)
+    {
+        for (String name : list)
+        {
+            System.out.println(name);
+        }
+    }
+
+    public static void addElementToArrayList(ArrayList<String> list)
+    {
+        Scanner scanner = new Scanner(System.in);
+        int choice = 0;
+        String name = " ";
+        System.out.println("enter how many elements you want to add ");
+        choice = scanner.nextInt();
+        for(int i = 0 ; i <= choice ; i++)
+        {
+            System.out.print("Enter a name : ");
+            name = scanner.next();
+            list.add(name);
+        }
     }
 }
