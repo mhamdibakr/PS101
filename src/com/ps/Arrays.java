@@ -1,5 +1,8 @@
 package com.ps;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -96,6 +99,26 @@ public class Arrays
             }
         }
         printArray(array);
+    }
+
+    public static void selectionSort(int[] array)
+    {
+       int temp = 0 , min;
+        for (int i = 0; i < array.length-1; i++)
+        {
+            // Find the minimum element in unsorted array
+            int min_idx = i;
+            for (int j = i+1; j < array.length; j++)
+                if (array[j] < array[min_idx])
+                    min_idx = j;
+
+            // Swap the found minimum element with the first
+            // element
+             temp = array[min_idx];
+            array[min_idx] = array[i];
+            array[i] = temp;
+        }
+       printArray(array);
     }
 
     public static void searchArray(int[] array, int element)
@@ -304,8 +327,8 @@ public class Arrays
         }
     }
 
-    public static void addElementToArrayList(ArrayList<String> list)
-    {
+    public static void addElementToArrayList(ArrayList<String> list) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Scanner scanner = new Scanner(System.in);
         int choice = 0;
         String name = " ";
@@ -313,9 +336,9 @@ public class Arrays
         choice = scanner.nextInt();
         for(int i = 0 ; i <= choice ; i++)
         {
-            System.out.print("Enter a name : ");
-            name = scanner.next();
-            list.add(name);
+            System.out.print("Enter a string: ");
+            String str= br.readLine();              //reads string
+            System.out.println("You have entered: "+str);
         }
     }
 }
