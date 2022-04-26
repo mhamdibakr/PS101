@@ -80,6 +80,15 @@ public class Arrays
     public static void reverseArray(int[] array)
     {
         // Must redo it later in order to build reflexion
+        for(int i = 0; i < array.length / 2 ; i++)
+        {
+            int temp = 0 ;
+            int si = array.length - 1;
+            temp = array[si - i];
+            array[si - i] = array[i];
+            array[i] = temp;
+        }
+        printArray(array);
     }
 
     public static void sortArray(int[] array)
@@ -109,8 +118,11 @@ public class Arrays
             // Find the minimum element in unsorted array
             int min_idx = i;
             for (int j = i+1; j < array.length; j++)
+            {
                 if (array[j] < array[min_idx])
                     min_idx = j;
+            }
+
 
             // Swap the found minimum element with the first
             // element
