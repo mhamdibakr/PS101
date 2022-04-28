@@ -79,16 +79,36 @@ public class Arrays
 
     public static void reverseArray(int[] array)
     {
+        int temp = 0 ;
+        int si = array.length - 1;
         // Must redo it later in order to build reflexion
         for(int i = 0; i < array.length / 2 ; i++)
         {
-            int temp = 0 ;
-            int si = array.length - 1;
             temp = array[si - i];
             array[si - i] = array[i];
             array[i] = temp;
         }
         printArray(array);
+    }
+    public static void LinearArray(int[] array, int element)
+    {
+        boolean isFound = false;
+        int index = 0;
+        System.out.println(array.length);
+        for (int i = 0 ; i < array.length ; i++ )
+        {
+            if(array[i] == element)
+            {
+                isFound = true;
+                index = i;
+                break;
+            }
+        }
+        if (isFound)
+            System.out.println("element is found in this array on index "+index);
+        else
+            System.out.println("element does not exist in the array");
+
     }
 
     public static void sortArray(int[] array)
@@ -131,27 +151,6 @@ public class Arrays
             array[i] = temp;
         }
        printArray(array);
-    }
-
-    public static void searchArray(int[] array, int element)
-    {
-        boolean isFound = false;
-        int index = 0;
-        System.out.println(array.length);
-        for (int i = 0 ; i < array.length ; i++ )
-        {
-            if(array[i] == element)
-            {
-                isFound = true;
-                index = i;
-                break;
-            }
-        }
-        if (isFound)
-            System.out.println("element is found in this array on index "+index);
-        else
-            System.out.println("element does not exist in the array");
-
     }
 
     public static void mergeArrays(int[] array1, int[] array2)
