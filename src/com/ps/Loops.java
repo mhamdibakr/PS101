@@ -362,5 +362,33 @@ public class Loops
         }
     }
 
+    public static void coronaNumber(int number)
+    {
+        int n = number, rest = 0;
+        boolean result = false;
+        while (n > 0)
+        {
+            rest = n % 10;
+            n /= 10;
+            result = isEven(rest);
+            if (result)
+                break;
+        }
+
+        if(result)
+            System.out.println("Number is not a corona number");
+        else
+            System.out.println("Number is a corona number");
+
+    }
+
+    private static boolean isEven(int number)
+    {
+        if(number % 2 == 0)
+            return true;
+        else
+            return false;
+    }
+
     // reducing the file size
 }

@@ -15,6 +15,7 @@ public class Main {
         int[][] array = {{1,2,3,5,3},{1,2,3,5,3},{1,2,3,5,3},{1,2,3,5,3},{1,2,3,5,3}};
 
         Arrays.selectionSort(numArrays);
+        Loops.coronaNumber(555);
 
     }
 }
