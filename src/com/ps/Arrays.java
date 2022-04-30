@@ -111,7 +111,7 @@ public class Arrays
 
     }
 
-    public static void sortArray(int[] array)
+    public static void bubbleSort(int[] array)
     {
         int temp = 0;
         int size = array.length - 1;

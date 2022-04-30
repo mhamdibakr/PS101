@@ -14,7 +14,7 @@ public class Main {
         int[][] values2 = {{5,6},{0,7}};
         int[][] array = {{1,2,3,5,3},{1,2,3,5,3},{1,2,3,5,3},{1,2,3,5,3},{1,2,3,5,3}};
 
-        Arrays.reverseArray(numArrays);
+        Arrays.selectionSort(numArrays);
 
     }
 }
