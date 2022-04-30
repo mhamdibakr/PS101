@@ -362,14 +362,5 @@ public class Loops
         }
     }
 
-
-    public static void prePost()
-    {
-        int i = 0 ;
-        System.out.println("i init value "+i);
-        int a = ++i;
-        System.out.println("i value "+i+" value returned by i "+a);
-
-    }
-
+    // reducing the file size
 }
