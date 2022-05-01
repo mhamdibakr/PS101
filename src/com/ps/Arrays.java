@@ -90,7 +90,7 @@ public class Arrays
         }
         printArray(array);
     }
-    public static void LinearArray(int[] array, int element)
+    public static void linearSearch(int[] array, int element)
     {
         boolean isFound = false;
         int index = 0;
