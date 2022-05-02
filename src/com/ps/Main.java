@@ -15,8 +15,7 @@ public class Main {
         int[][] array = {{1,2,3,5,3},{1,2,3,5,3},{1,2,3,5,3},{1,2,3,5,3},{1,2,3,5,3}};
 
         Arrays.selectionSort(numArrays);
-        System.out.println("yeah , whatever the fuck dude");
-        System.out.println("Yeah michael look that corner , he was anywhere alongside him");
+        Loops.justEvenNumbers(15);
 
     }
 }
