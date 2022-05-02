@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class Arrays
 {
+    // Exercies about arrays
     public static void fillArray(int[] array, int size)
     {
         Scanner scanner = new Scanner(System.in);

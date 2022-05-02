@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Loops
 {
+    // Exercies about loops
     public static void from1to10()
     {
         for(int i = 1 ; i <= 10 ; i++)
