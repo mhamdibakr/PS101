@@ -70,13 +70,34 @@ public class Conditions
     public static void leapYear(int year)
     {
         String res = "\0";
-        if(year % 4 == 0)
-            res = "Leap year";
-        else if(year % 100 == 0 && year % 400 == 0)
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
             res = "Leap year";
         else
             res = "Not a leap year";
 
         System.out.println(res);
     }
+
+
+    /* Write a program to calculate the monthly telephone bills as per the following rule:
+       Minimum Rs. 200 for up to 100 calls.
+       Plus Rs. 0.60 per call for next 50 calls.
+       Plus Rs. 0.50 per call for next 50 calls.
+       Plus Rs. 0.40 per call for any call beyond 200 calls.     */
+
+    public static void phoneBill(int calls)
+    {
+        double amout = 0;
+        if(calls <= 100)
+            amout = 200;
+        else if(calls <= 150)
+            amout = 200 + (calls - 100) * 0.60 ;
+        else if(calls <= 200)
+            amout = 200 + 50 * 0.60 + (calls - 150) * 0.50;
+        else if(calls < 200)
+            amout = 200 + 50 * 0.60 + 50 * 0.50 + (calls - 200) * 0.40;
+
+        System.out.println("The bill is : "+amout);
+    }
+
 }

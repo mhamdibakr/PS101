@@ -5,6 +5,6 @@ public class Main {
 
     public static void main(String[] args) throws IOException
     {
-        Conditions.leapYear(1999);
+        Conditions.phoneBill(162);
     }
 }
