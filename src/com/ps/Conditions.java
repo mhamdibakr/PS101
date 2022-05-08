@@ -100,4 +100,22 @@ public class Conditions
         System.out.println("The bill is : "+amout);
     }
 
+    public static void gradeCalculator(int g1 , int g2 , int g3)
+    {
+        double avg = (g1 + g2 + g3) / 3;
+        char grade = '\0';
+        if(avg >= 90)
+            grade = 'A';
+        else if(avg >= 80)
+            grade = 'B';
+        else if(avg >= 70)
+            grade = 'C';
+        else if(avg >= 60)
+            grade = 'D';
+        else
+            grade = 'F';
+
+        System.out.println("The grade is : "+grade);
+    }
+
 }
