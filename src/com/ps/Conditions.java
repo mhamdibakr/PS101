@@ -30,4 +30,53 @@ public class Conditions
         else
             System.out.println("Unfortunatley you dont take a discount");
     }
+
+    public static void largestNumberIn3(int n1 , int n2 , int n3)
+    {
+        int lagest = 0;
+        if(n1 > n2 && n1 > n3)
+            lagest = n1;
+        else if(n2 > n1 && n2 > n3)
+            lagest = n2;
+        else
+            lagest = n3;
+
+        System.out.println(lagest+" is the largest");
+    }
+
+    public static void PNZ(int number)
+    {
+        String des = "\0";
+        System.out.println(des);
+        if(number > 0)
+            des = "Number is positive";
+        else if (number < 0)
+            des = "Number is negative";
+        else
+            des = "Number is a zero";
+
+        System.out.println(des);
+    }
+
+    public static void validTriangle(int a1, int a2, int a3)
+    {
+        int triangleSum = a1 + a2 + a3 ;
+        if(triangleSum == 180)
+            System.out.println("Valid Trinagle");
+        else
+            System.out.println("Not a Valid Trinagle");
+    }
+
+    public static void leapYear(int year)
+    {
+        String res = "\0";
+        if(year % 4 == 0)
+            res = "Leap year";
+        else if(year % 100 == 0 && year % 400 == 0)
+            res = "Leap year";
+        else
+            res = "Not a leap year";
+
+        System.out.println(res);
+    }
 }
