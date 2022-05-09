@@ -5,6 +5,6 @@ public class Main {
 
     public static void main(String[] args) throws IOException
     {
-        Conditions.comparingStrings("zouhair", "bakr" , "soufiane");
+        Loops.multiplicationTable(5);
     }
 }
