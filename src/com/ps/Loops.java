@@ -147,4 +147,111 @@ public class Loops
         System.out.println(hcf);
     }
 
+    public static void promptNumbersSum()
+    {
+        Scanner scanner = new Scanner(System.in);
+        int sum = 0 , input;
+        char choice = '\0';
+
+        do
+        {
+            System.out.println("Enter a number ");
+            input = scanner.nextInt();
+            sum += input;
+            System.out.println("Press c to continue or any other key to leave");
+            choice = scanner.next().charAt(0);
+
+        }while (choice == 'c' || choice == 'C');
+
+        System.out.println(sum);
+    }
+
+    public static void numberCount()
+    {
+        Scanner scanner = new Scanner(System.in);
+        int input, posCount = 0, negCount = 0, zCount = 0;
+        char choice = '\0';
+
+        do
+        {
+            System.out.println("Enter a number" );
+            input = scanner.nextInt();
+
+            if(input > 0)
+                posCount++;
+            else if(input < 0)
+                negCount++;
+            else
+                zCount++;
+
+            System.out.println("Press c to continue or any other key to leave");
+            choice = scanner.next().charAt(0);
+
+        }while (choice == 'c' || choice == 'C');
+
+        System.out.println("Positive numbers count : "+posCount);
+        System.out.println("Negative numbers count : "+negCount);
+        System.out.println("Zer00000 000000s count : "+zCount);
+    }
+
+    public static void largestANDsmallest()
+    {
+        Integer largest = Integer.MIN_VALUE , smallest = Integer.MAX_VALUE, sum = 0,  input;
+        Character choice = '\0';
+        Scanner scanner = new Scanner(System.in);
+
+        do
+        {
+            System.out.println("Enter a number ");
+            input = scanner.nextInt();
+
+            if (input > largest)
+                largest = input;
+            if(input < smallest)
+                smallest = input;
+
+            sum += input;
+
+            System.out.println("Press c to continue or any other key to leave");
+            choice = scanner.next().charAt(0);
+
+        }while (choice == 'c' || choice == 'C');
+
+        System.out.println("Largest  number is : "+largest);
+        System.out.println("Smallest number is : "+smallest);
+        System.out.println("The sum of numbers is : "+sum);
+    }
+
+    public static void checkArmstrongNumber(int n)
+    {
+        int number = n, reminder = 0;
+        int sum = 0;
+        do
+        {
+            reminder  = number % 10;
+            sum += powerSquared(reminder);
+            number /= 10;
+        }while (number > 0);
+
+        if(sum == n)
+            System.out.println(sum);
+    }
+
+    public static void armstrongNumber()
+    {
+        for (int i = 1 ; i <= 500 ; i++)
+        {
+            checkArmstrongNumber(i);
+        }
+    }
+
+    public static int powerSquared(int number)
+    {
+        int res = 1;
+        for (int i = 0 ; i < 3 ; i++)
+        {
+            res *= number;
+        }
+        return res;
+    }
 }
