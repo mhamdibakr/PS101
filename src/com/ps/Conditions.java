@@ -1,5 +1,7 @@
 package com.ps;
 
+import java.util.Scanner;
+
 public class Conditions
 {
     public static void oddOrEven(int number)
@@ -118,4 +120,85 @@ public class Conditions
         System.out.println("The grade is : "+grade);
     }
 
+    public static void meaningOfGrdae()
+    {
+        Scanner scanner = new Scanner(System.in);
+        char grade, choice = '\0';
+
+        do
+        {
+            System.out.println("Enter a grade : ");
+            grade = scanner.next().charAt(0);
+
+            switch (grade)
+            {
+                case 'a':
+                    System.out.println("Excellent");
+                    break;
+                case 'b':
+                    System.out.println("Good");
+                    break;
+                case 'c':
+                    System.out.println("Average");
+                    break;
+                case 'd':
+                    System.out.println("Deficient");
+                    break;
+                case 'f':
+                    System.out.println("Failing");
+                    break;
+
+                default:
+                    System.out.println("Wrong input");
+            }
+            System.out.println("press c if you want to continue or any other key to leave");
+            choice = scanner.next().charAt(0);
+        }while (choice == 'c' || choice == 'C');
+    }
+
+    public static void comparingStrings(String s1, String s2, String s3)
+    {
+        if(s1.compareTo(s2) > 0 && s1.compareTo(s3) > 0)
+        {
+            System.out.println(s1);
+            if (s2.compareTo(s3) > 0)
+            {
+                System.out.println(s2);
+                System.out.println(s3);
+            }
+            else
+            {
+                System.out.println(s3);
+                System.out.println(s2);
+            }
+        }
+        else if (s2.compareTo(s1) > 0 && s2.compareTo(s3) > 0)
+        {
+            System.out.println(s2);
+            if(s1.compareTo(s3) > 0)
+            {
+                System.out.println(s1);
+                System.out.println(s3);
+            }
+            else
+            {
+                System.out.println(s3);
+                System.out.println(s1);
+            }
+        }
+        else
+        {
+            System.out.println(s3);
+            if(s1.compareTo(s2) > 0)
+            {
+                System.out.println(s1);
+                System.out.println(s2);
+            }
+            else
+            {
+                System.out.println(s2);
+                System.out.println(s1);
+            }
+        }
+    }
 }

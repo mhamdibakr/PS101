@@ -5,6 +5,6 @@ public class Main {
 
     public static void main(String[] args) throws IOException
     {
-        Conditions.gradeCalculator(50,98,95);
+        Conditions.comparingStrings("zouhair", "bakr" , "soufiane");
     }
 }
