@@ -5,6 +5,8 @@ public class Main {
 
     public static void main(String[] args) throws IOException
     {
-        Loops.multiplicationTable(5);
+        //Loops.factoriel(5);
+        int res = Loops.factorielRecurion(5);
+        System.out.println(res);
     }
 }
