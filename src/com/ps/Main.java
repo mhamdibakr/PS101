@@ -5,8 +5,6 @@ public class Main {
 
     public static void main(String[] args) throws IOException
     {
-        //Loops.factoriel(5);
-        int res = Loops.factorielRecurion(5);
-        System.out.println(res);
+        Loops.HCFbyDivision(27,18);
     }
 }
