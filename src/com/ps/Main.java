@@ -5,7 +5,6 @@ public class Main {
 
     public static void main(String[] args) throws IOException
     {
-        Loops.fibonacci(9);
-
+       Loops.iIteration(9);
     }
 }

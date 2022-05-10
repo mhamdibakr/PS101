@@ -259,12 +259,32 @@ public class Loops
     {
         int f_term = 0 , s_term = 1 , th_term ;
 
-        for(int i = 2;  i <= number ; i++)
+        for(int i = 0;  i <= number ; i++)
         {
             th_term = f_term + s_term;
             f_term = s_term;
             s_term = th_term;
             System.out.print(th_term+" ");
         }
+    }
+
+    public static int fibonacciRecursion(int number)
+    {
+        if (number <= 1)
+            return number;
+
+        return fibonacciRecursion(number - 1) + fibonacciRecursion(number - 2);
+    }
+
+    public static void iIteration(int n)
+    {
+        double res = 1;
+        for(int i = 2 ; i <= n ; i++)
+        {
+            res += (double) 1 / i ;
+            String formattedString = String.format("%.04f", res);
+            System.out.print(formattedString+" ");
+        }
+
     }
 }
