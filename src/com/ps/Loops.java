@@ -239,7 +239,7 @@ public class Loops
 
     public static void armstrongNumber()
     {
-        for (int i = 1 ; i <= 500 ; i++)
+        for (int i = 1 ; i <= 50 ; i++)
         {
             checkArmstrongNumber(i);
         }
@@ -253,5 +253,18 @@ public class Loops
             res *= number;
         }
         return res;
+    }
+
+    public static void fibonacci(int number)
+    {
+        int f_term = 0 , s_term = 1 , th_term ;
+
+        for(int i = 2;  i <= number ; i++)
+        {
+            th_term = f_term + s_term;
+            f_term = s_term;
+            s_term = th_term;
+            System.out.print(th_term+" ");
+        }
     }
 }
