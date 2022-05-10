@@ -285,6 +285,19 @@ public class Loops
             String formattedString = String.format("%.04f", res);
             System.out.print(formattedString+" ");
         }
+    }
 
+    public static void LogarithmofN(int number)
+    {
+        double sum = 0 ;
+        int sign = 1;
+        for(int i = 1 ; i <= number ; i++)
+        {
+            sum += sign / (double) i;
+            sign *= -1 ;
+            String stringSum = String.format("%.05f",sum);
+            System.out.print(stringSum+" ");
+        }
+        System.out.println("\nLog of "+number+" is "+sum);
     }
 }

@@ -5,6 +5,6 @@ public class Main {
 
     public static void main(String[] args) throws IOException
     {
-       Loops.iIteration(9);
+       Loops.LogarithmofN(9);
     }
 }
