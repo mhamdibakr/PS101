@@ -300,4 +300,85 @@ public class Loops
         }
         System.out.println("\nLog of "+number+" is "+sum);
     }
+
+    public static void pickNumber()
+    {
+        int input = 0, tries = 0 , number ;
+        Scanner scanner = new Scanner(System.in);
+        number =  (int)(Math.random()*(20-1+1)+1);
+        while (input != number)
+        {
+            tries++;
+            System.out.println("Enter a number from 1 to 20");
+            input = scanner.nextInt();
+
+            if(input > number)
+                System.out.println("Too high");
+            else if(input < number)
+                System.out.println("Too low");
+            else
+                System.out.println("Got it right mate");
+        }
+        System.out.println("You find the number in "+tries+" tries");
+    }
+
+    public static void drawAshape(int rows, int cols)
+    {
+            for (int i = 0 ; i < rows ; i++)
+            {
+                for (int l = 0 ; l < cols ; l++)
+                {
+                    System.out.print("* ");
+                }
+                System.out.println();
+            }
+    }
+
+    public static void leftTriangle(int rows)
+    {
+        for (int i = 0 ; i < rows ; i++)
+        {
+            for( int j = 0 ; j <= i ; j++)
+            {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void rightTriangle(int n)
+    {
+        for(int i=0; i<n; i++)
+        {
+            for(int j=2*(n-i); j>=0; j--)
+            {
+                System.out.print(" ");
+            }
+
+            for(int j=0; j<=i; j++)
+            {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void printPyramid(int n)
+    {
+        int k = 0;
+        for (int i = 1; i <= n; ++i)
+        {
+            k = 0;
+            for (int space = 1; space <= n - i; ++space) {
+                System.out.print("- ");
+            }
+
+            while (k != 2 * i - 1) {
+                System.out.print("* ");
+                ++k;
+            }
+
+            System.out.println();
+        }
+    }
 }
