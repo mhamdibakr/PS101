@@ -444,5 +444,21 @@ public class Loops
         }
     }
 
+    public static void fizzBuzz()
+    {
+        String string;
+        for (int i = 0 ; i < 100 ; i++)
+        {
+            string = "";
+            if(i % 3 == 0)
+                string += "fizz";
+
+            if(i % 5 == 0)
+                string += "Buzz";
+
+            System.out.println(string);
+        }
+    }
+
 
 }
