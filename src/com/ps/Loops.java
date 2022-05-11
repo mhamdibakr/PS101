@@ -473,8 +473,6 @@ public class Loops
 
             sign *= -1;
             result += sign * power / (double) fact;
-
-            System.out.println(result);
         }
 
     }
@@ -499,6 +497,20 @@ public class Loops
         System.out.format("The sine of " + x + " is %f",sine);
     }
 
+    public static void cosX(int x, int n)
+    {
+        int sign = 1, fact, power;
+        double result = 0;
+        for(int i = 2 ; i <= n ; i+=2)
+        {
+            fact  = factorielRecurion(i);
+            power = nPowerdx(x,i);
+
+            result += (double) sign * power / fact ;
+            sign *= -1;
+        }
+        System.out.println(result);
+    }
 
     public static int nPowerdx(int n, int x)
     {
