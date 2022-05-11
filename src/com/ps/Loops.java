@@ -512,6 +512,24 @@ public class Loops
         System.out.println(result);
     }
 
+    // also computing the cos the correct way
+    public static void cosX2(int x)
+    {
+        double y;
+        y = x*Math.PI/180;
+        int n = 10;
+        int i,j,fac;
+        double cosine = 0;
+        for(i=0; i<=n; i++){
+            fac = 1;
+            for(j=2; j<=2*i; j++){
+                fac*=j;
+            }
+            cosine+=Math.pow(-1.0,i)*Math.pow(y,2*i)/fac;
+        }
+        System.out.format("The cosine of " + x + " is %f",cosine);
+    }
+
     public static int nPowerdx(int n, int x)
     {
         int res = 1 ;

@@ -5,7 +5,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException
     {
-        Loops.cosX(5,10);
+        Loops.cosX2(5);
     }
 }
 
