@@ -460,5 +460,52 @@ public class Loops
         }
     }
 
+    public static void sinX(int n)
+    {
+        double res = n;
+        int sign = 1;
+        for(int i = 3 ; i <= n ; i = i + 2)
+        {
+            int fact = 1 , power = 1 ;
+            for(int j = 1; j <= i; j++) {
+                power *= n;
+                fact *= j;
+            }
+            sign *= -1;
+            res += sign * power / fact ;
+        }
+        System.out.println(res);
+    }
+
+    public static void sinX2(int x, int n) {
+        int sign = -1;
+        float sum = 0.0F;
+
+        for(int i = 3; i <= n; i += 2) {
+            float p = 1.0F;
+            int fact = 1;
+
+            for(int j = 1; j <= i; ++j) {
+                p *= (float)x;
+                fact *= j;
+            }
+
+            sign *= -1;
+            sum += (float)sign * p / (float)fact;
+        }
+
+        System.out.println(sum);
+    }
+
+    public static int nPowerdx(int n, int x)
+    {
+        int res = 1 ;
+        for(int i = 0 ; i < x ; i++)
+        {
+            res *= n;
+        }
+        return res ;
+    }
+
 
 }
