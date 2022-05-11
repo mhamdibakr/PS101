@@ -460,42 +460,45 @@ public class Loops
         }
     }
 
-    public static void sinX(int n)
+    //way of the series
+    public static void sinX(int n, int x)
     {
-        double res = n;
         int sign = 1;
-        for(int i = 3 ; i <= n ; i = i + 2)
+        double result = 1;
+        for(int i = 1 ; i <= n ; i += 2)
         {
-            int fact = 1 , power = 1 ;
-            for(int j = 1; j <= i; j++) {
-                power *= n;
-                fact *= j;
-            }
-            sign *= -1;
-            res += sign * power / fact ;
-        }
-        System.out.println(res);
-    }
-
-    public static void sinX2(int x, int n) {
-        int sign = -1;
-        float sum = 0.0F;
-
-        for(int i = 3; i <= n; i += 2) {
-            float p = 1.0F;
-            int fact = 1;
-
-            for(int j = 1; j <= i; ++j) {
-                p *= (float)x;
-                fact *= j;
-            }
+            int fact = 1, power = 1;
+            fact = factorielRecurion(i);
+            power = nPowerdx(x,i);
 
             sign *= -1;
-            sum += (float)sign * p / (float)fact;
+            result += sign * power / (double) fact;
+
+            System.out.println(result);
         }
 
-        System.out.println(sum);
     }
+
+    // The correct way
+    public static void sinX2(int x) {
+        double y;
+        y = x*Math.PI/180;
+        int n = 10, sign = 1;
+        double sine = 0;
+        for(int i=0; i<=n; i++)
+        {
+            int fac = 1;
+            for(int j=2; j<=2*i+1; j++)
+            {
+                fac *= j;
+            }
+
+            sine += sign* Math.pow(y,2*i+1) / fac;
+            sign *= -1;
+        }
+        System.out.format("The sine of " + x + " is %f",sine);
+    }
+
 
     public static int nPowerdx(int n, int x)
     {
