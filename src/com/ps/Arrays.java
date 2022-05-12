@@ -92,4 +92,16 @@ public class Arrays
         }
     }
 
+    public static void reverseArray(int[] array)
+    {
+        int temp, size = array.length - 1;
+        for(int i = 0 ; i <= size / 2 ; i++)
+        {
+            temp = array[i];
+            array[i] = array[size - i];
+            array[size - i] = temp;
+        }
+        printIntArray(array);
+    }
+
 }
