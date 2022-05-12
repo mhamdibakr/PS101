@@ -142,4 +142,8 @@ public class Arrays
         }
         printIntArray(array);
     }
+
+    //selction sort
+
+    // merge 2 arrays
 }
