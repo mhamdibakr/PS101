@@ -104,4 +104,26 @@ public class Arrays
         printIntArray(array);
     }
 
+    public static void linearSearch(int[] array, int number)
+    {
+        boolean isFound = false;
+        int index = '\0';
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            if(array[i] == number)
+            {
+                isFound = true;
+                index = i;
+                break;
+            }
+
+        }
+
+        if(isFound)
+            System.out.println(number+" is found and it index is "+index);
+        else
+            System.out.println("Not found 404");
+
+    }
+
 }

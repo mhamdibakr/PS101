@@ -9,7 +9,7 @@ public class Main {
         int[] array2 = new int[5];
         String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 
-        Arrays.reverseArray(array);
+        Arrays.linearSearch(array,85);
     }
 }
 
