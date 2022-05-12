@@ -123,7 +123,23 @@ public class Arrays
             System.out.println(number+" is found and it index is "+index);
         else
             System.out.println("Not found 404");
-
     }
 
+    public static void bubbleSort(int[] array)
+    {
+        int temp ;
+        for(int i = 0 ; i < array.length - 1; i++)
+        {
+            for(int k = 0 ; k < array.length- i - 1 ; k++)
+            {
+                if(array[k] > array[k + 1])
+                {
+                    temp = array[k];
+                    array[k] = array[k+1];
+                    array[k+1]= temp;
+                }
+            }
+        }
+        printIntArray(array);
+    }
 }
