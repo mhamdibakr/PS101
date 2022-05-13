@@ -181,4 +181,21 @@ public class Arrays
             printIntArray(array3);
         }
     }
+
+    public static void mergeTwoArrays2(int[] array1, int[] array2)
+    {
+        int size = array1.length + array2.length ;
+        int[] array3 = new int[size];
+        for (int i = 0 ; i < array1.length ; i++)
+        {
+            array3[i] =  array1[i];
+        }
+
+        for (int i = 0; i < array2.length ; i++)
+        {
+            array3[array1.length + i] = array2[i];
+        }
+
+        printIntArray(array3);
+    }
 }
