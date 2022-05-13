@@ -163,4 +163,22 @@ public class Arrays
     }
 
     // merge 2 arrays
+    public static void mergeTwoArrays(int[] array1, int[] array2)
+    {
+        int size = array1.length;
+        int[] array3 = new int[size];
+
+        if(array1.length != array2.length)
+        {
+            throw new RuntimeException("Both Arrays size should be the same");
+        }
+        else
+        {
+            for(int i = 0 ; i < array1.length || i < array2.length ; i++)
+            {
+                array3[i] = array1[i] + array2[i];
+            }
+            printIntArray(array3);
+        }
+    }
 }
