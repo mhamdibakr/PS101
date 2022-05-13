@@ -10,6 +10,7 @@ public class Main {
         String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 
         Arrays.print2dArray(array2);
+        Arrays.ops2dArray(array2);
     }
 }
 

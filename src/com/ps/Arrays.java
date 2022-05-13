@@ -224,4 +224,23 @@ public class Arrays
             System.out.println();
         }
     }
+
+    public static void ops2dArray(int[][] array)
+    {
+        int tot_sum = 0 ;
+        for(int i = 0 ; i < array.length ; i++)
+        {   int index = i + 1;
+            int row_sum = 0 , col_sum = 0;
+            for (int j = 0 ; j < array[i].length ; j++)
+            {
+                tot_sum += array[i][j];
+                row_sum += array[i][j];
+                col_sum += array[j][i];
+            }
+            System.out.println("sum of row "+ index +" is "+row_sum);
+            System.out.println("sum of col "+ index +" is "+col_sum);
+            System.out.println();
+        }
+        System.out.println("sum of the whole array is "+tot_sum);
+    }
 }
