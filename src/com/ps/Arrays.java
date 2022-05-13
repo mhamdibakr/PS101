@@ -198,4 +198,30 @@ public class Arrays
 
         printIntArray(array3);
     }
+
+    public static void fill2dArray(int[][] array)
+    {
+        Scanner scanner = new Scanner(System.in);
+        int input = '\0';
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            for (int j = 0 ; j < array[i].length ; j++)
+            {
+                System.out.println("Enter a value of element ["+i+"]["+j+"]");
+                input = scanner.nextInt();
+                array[i][j] = input;
+            }
+        }
+    }
+    public static void print2dArray(int[][] array)
+    {
+        for (int i = 0; i < array.length ; i++)
+        {
+            for (int j = 0 ; j < array[i].length ; j++)
+            {
+                System.out.print(array[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
 }
