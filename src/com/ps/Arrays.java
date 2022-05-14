@@ -262,4 +262,51 @@ public class Arrays
             print2dArray(array2);
 
     }
+
+    public static void leftDiagone(int[][] array)
+    {
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            for(int j = 0 ; j < array[i].length ; j++)
+            {
+                if(i == j)
+                    System.out.print(array[i][j]+" ");
+                else
+                    System.out.print("   ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void rightDiagonale(int[][] array)
+    {
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            for (int j = 0 ; j < array[i].length ; j++)
+            {
+                if(j == array.length - 1 - i)
+                    System.out.print(array[i][j]+" ");
+                else
+                    System.out.print("   ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void bothDiagonals(int[][] array)
+    {
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            for (int k = 0 ; k < array[i].length ; k++)
+            {
+                if(i == k)
+                    System.out.print(array[i][k]+" ");
+                else if(k == array.length - 1 - i)
+                    System.out.print(array[i][k]+" ");
+                else
+                    System.out.print("   ");
+            }
+            System.out.println();
+        }
+    }
 }
