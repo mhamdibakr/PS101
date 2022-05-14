@@ -334,4 +334,30 @@ public class Arrays
         System.out.println("left diagonal sum is "+leftSum);
         System.out.println("right diagonal sum is "+rightSum);
     }
+
+    public static void rowMultipilcation(int[][] array)
+    {
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            int sum = 1, index = i + 1;
+            for (int j  = 0 ; j < array[i].length ; j++)
+            {
+                sum *= array[i][j];
+            }
+            System.out.println("The sum of row "+index+" is "+sum);
+        }
+    }
+
+    public static void colsMultiplication(int[][] array)
+    {
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            int sum = 1 , index = i + 1;
+            for (int j = 0 ; j < array[i].length ; j++)
+            {
+                sum *= array[j][i];
+            }
+            System.out.println("The sum of column "+index+" is "+sum);
+        }
+    }
 }
