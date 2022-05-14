@@ -309,4 +309,29 @@ public class Arrays
             System.out.println();
         }
     }
+
+    public static void diagonalSum(int[][] array)
+    {
+        int leftSum = 0 , rightSum = 0 , fullSum = 0;
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            for (int j = 0 ; j < array[i].length ; j++)
+            {
+                if(i == j)
+                {
+                    leftSum += array[i][j];
+                    fullSum += array[i][j];
+                }
+
+                if(j == array.length - 1 -i)
+                {
+                    rightSum += array[i][j];
+                    fullSum  += array[i][j];
+                }
+            }
+        }
+        System.out.println("Both diagonal sum is "+fullSum);
+        System.out.println("left diagonal sum is "+leftSum);
+        System.out.println("right diagonal sum is "+rightSum);
+    }
 }

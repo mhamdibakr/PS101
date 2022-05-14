@@ -11,9 +11,8 @@ public class Main {
 
 
         Arrays.print2dArray(array2);
-        Arrays.leftDiagone(array2);
-        Arrays.rightDiagonale(array2);
         Arrays.bothDiagonals(array2);
+        Arrays.diagonalSum(array2);
 
     }
 }
