@@ -243,4 +243,25 @@ public class Arrays
         }
         System.out.println("sum of the whole array is "+tot_sum);
     }
+
+    public static void invertMatrix(int[][] array)
+    {
+        int rows = array.length;
+        int cols = array[0].length;
+
+        if(rows != cols)
+            throw new RuntimeException("rows and columns must be equaled to perform such op");
+        else
+        {
+            int[][] array2 = new int[cols][rows];
+            for(int i = 0 ; i < rows ; i++)
+            {
+                for (int j = 0 ; j < cols ; j++)
+                {
+                    array2[j][i] = array[i][j];
+                }
+            }
+            print2dArray(array2);
+        }
+    }
 }
