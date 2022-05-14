@@ -71,13 +71,14 @@ public class Conditions
 
     public static void leapYear(int year)
     {
-        String res = "\0";
-        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
-            res = "Leap year";
-        else
-            res = "Not a leap year";
+       String output = "\0";
 
-        System.out.println(res);
+       if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+           output = "Leap Year";
+       else
+           output = "Common Year";
+
+       System.out.println(year+" is a "+output+" year");
     }
 
 

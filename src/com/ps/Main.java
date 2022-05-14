@@ -12,6 +12,9 @@ public class Main {
 
         Arrays.print2dArray(array2);
         Arrays.colsMultiplication(array2);
+        Conditions.leapYear(2020);
+        System.out.println("box and pit confirm max please");
+
     }
 }
 
