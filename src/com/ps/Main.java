@@ -5,12 +5,13 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         int[] array = {1, 55, 41, 77, 23, 15, 33};
-        int[][] array2 = {{10, 20, 30}, {40, 50, 60}, {70, 80, 90}};
+        int[][] array2 = {{10, 20, 30}, {40, 50, 60}, {70, 80, 90},{33, 23, 18}};
         String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 
 
 
         Arrays.print2dArray(array2);
+        System.out.println();
         Arrays.invertMatrix(array2);
 
     }

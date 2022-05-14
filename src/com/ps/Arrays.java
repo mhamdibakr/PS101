@@ -249,10 +249,8 @@ public class Arrays
         int rows = array.length;
         int cols = array[0].length;
 
-        if(rows != cols)
-            throw new RuntimeException("rows and columns must be equaled to perform such op");
-        else
-        {
+
+
             int[][] array2 = new int[cols][rows];
             for(int i = 0 ; i < rows ; i++)
             {
@@ -262,6 +260,6 @@ public class Arrays
                 }
             }
             print2dArray(array2);
-        }
+
     }
 }
