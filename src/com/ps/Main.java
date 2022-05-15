@@ -1,6 +1,8 @@
 package com.ps;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
+
 public class Main {
 
     public static void main(String[] args) throws IOException {
@@ -8,13 +10,7 @@ public class Main {
         int[][] array2 = {{10, 20, 30}, {40, 50, 60}, {70, 80, 90}};
         String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 
-
-
-        Arrays.print2dArray(array2);
-        Arrays.colsMultiplication(array2);
-        Conditions.leapYear(2020);
-        System.out.println("box and pit confirm max please");
-
+        Arrays.selectionSortUpdated(array);
     }
 }
 

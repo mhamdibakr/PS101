@@ -162,6 +162,32 @@ public class Arrays
         printIntArray(array);
     }
 
+    public static void selectionSortUpdated(int[] array)
+    {
+        int temp = 0, smallest = 0, index=0;
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            boolean state =  false;
+            index = i;
+            for(int j = i ; j < array.length -1; j++)
+            {
+                if(array[index] > array[j+1])
+                {
+                    smallest = array[j+1];
+                    index = j+1;
+                    state = true;
+                }
+            }
+            if(state == true)
+            {
+                temp  = array[i];
+                array[i] = array[index];
+                array[index] = temp;
+            }
+        }
+        printIntArray(array);
+    }
+
     // merge 2 arrays
     public static void mergeTwoArrays(int[] array1, int[] array2)
     {
