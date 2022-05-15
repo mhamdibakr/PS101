@@ -386,4 +386,19 @@ public class Arrays
             System.out.println("The sum of column "+index+" is "+sum);
         }
     }
+
+    public static void upperHalf(int[][] array)
+    {
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            for (int j = 0 ; i < array.length ; j++)
+            {
+                if(j >= i)
+                    System.out.print(array[i][j]);
+                else
+                    System.out.print("  ");
+            }
+            System.out.println();
+        }
+    }
 }
