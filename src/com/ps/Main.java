@@ -10,6 +10,7 @@ public class Main {
         int[][] array2 = {{10, 20, 30}, {40, 50, 60}, {70, 80, 90}};
         String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 
+        System.out.println("Box and pit confirm Max please");
         Arrays.selectionSortUpdated(array);
     }
 }
