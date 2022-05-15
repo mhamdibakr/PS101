@@ -391,12 +391,12 @@ public class Arrays
     {
         for(int i = 0 ; i < array.length ; i++)
         {
-            for (int j = 0 ; i < array.length ; j++)
+            for(int k = 0 ; k < array.length ; k++)
             {
-                if(j >= i)
-                    System.out.print(array[i][j]);
+                if(k >= i)
+                    System.out.print(array[i][k]+" ");
                 else
-                    System.out.print("  ");
+                    System.out.print("   ");
             }
             System.out.println();
         }
