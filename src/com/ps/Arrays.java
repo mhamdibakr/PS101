@@ -239,6 +239,26 @@ public class Arrays
             }
         }
     }
+
+    public static boolean checkMatrix(int[][] array)
+    {
+        boolean isMatrix = true;
+        for (int i = 0 ; i < array.length ; i++)
+        {
+            int rows = array.length, cols = 0;
+            for (int j = 0 ; j < array[i].length ; j++)
+            {
+                cols++;
+            }
+            if(rows != cols)
+            {
+                isMatrix = false;
+                break;
+            }
+        }
+        return isMatrix;
+    }
+
     public static void print2dArray(int[][] array)
     {
         for (int i = 0; i < array.length ; i++)
@@ -272,21 +292,16 @@ public class Arrays
 
     public static void invertMatrix(int[][] array)
     {
-        int rows = array.length;
-        int cols = array[0].length;
-
-
-
-            int[][] array2 = new int[cols][rows];
-            for(int i = 0 ; i < rows ; i++)
-            {
-                for (int j = 0 ; j < cols ; j++)
-                {
-                    array2[j][i] = array[i][j];
-                }
-            }
-            print2dArray(array2);
-
+      int rows = array.length, cols = array[0].length;
+      int[][] array2 = new int[rows][cols];
+      for (int i = 0 ; i < rows ; i++)
+      {
+          for (int j = 0 ; j < cols ; j++)
+          {
+              array2[j][i] = array[i][j];
+          }
+      }
+      print2dArray(array2);
     }
 
     public static void leftDiagone(int[][] array)
@@ -399,6 +414,28 @@ public class Arrays
                     System.out.print("   ");
             }
             System.out.println();
+        }
+    }
+
+    public static void sumOf2Arrays(int[][] array1, int[][] array2)
+    {
+        if(array1.length != array2.length)
+            System.out.println("Rows arent equals");
+        else if(array1[0].length != array2[0].length)
+            System.out.println("Columns arent equals");
+        else
+        {
+            int rows = array1.length, columns = array1[0].length;
+            int[][] array3 = new int[rows][columns];
+
+            for (int i = 0 ; i < rows ; i++)
+            {
+                for (int j = 0 ; j < columns ; j++)
+                {
+                    array3[i][j] = array1[i][j] + array2[i][j];
+                }
+            }
+            print2dArray(array3);
         }
     }
 
