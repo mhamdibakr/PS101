@@ -401,4 +401,9 @@ public class Arrays
             System.out.println();
         }
     }
+
+    public static void midRowCol(int[][] array)
+    {
+        // some blabla code implementation
+    }
 }
