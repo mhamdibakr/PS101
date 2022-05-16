@@ -402,8 +402,28 @@ public class Arrays
         }
     }
 
-    public static void midRowCol(int[][] array)
+    public static void midRow(int[][] array)
     {
-        // some blabla code implementation
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            for (int j = 0 ; j < array.length ; j++)
+            {
+                if(j + i == i + 1)
+                    System.out.print(array[j][i]+" ");
+            }
+        }
     }
+
+    public static void midCol(int[][] array)
+    {
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            for (int j = 0 ; j < array.length ; j++)
+            {
+                if(i + j == i + 1)
+                    System.out.print(array[i][j]+" ");
+            }
+        }
+    }
+
 }
