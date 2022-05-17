@@ -11,7 +11,7 @@ public class Main {
         int[][] array55 = {{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};
         String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 
-        System.out.println(Arrays.checkMatrix(array2));
+        Arrays.middleRowCol(array2,array2.length);
     }
 }
 

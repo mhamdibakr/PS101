@@ -463,11 +463,19 @@ public class Arrays
         }
     }
     
-    public static void middleRowCol(int[][] array)
+    public static void middleRowCol(int[][] array, int rows)
     {
-        if(array.length - 1 % 2 != 0)
+        if(rows % 2 != 0)
         {
-
+            int midRow = rows / 2;
+            for (int i = 0 ; i < array.length ;i++)
+            {
+                System.out.print(array[midRow][i]+" ");
+            }
+            for (int i = 0 ; i < array.length ; i++)
+            {
+                System.out.print(array[i][midRow]+" ");
+            }
         }
     }
 
