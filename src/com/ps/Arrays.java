@@ -462,5 +462,13 @@ public class Arrays
             }
         }
     }
+    
+    public static void middleRowCol(int[][] array)
+    {
+        if(array.length - 1 % 2 != 0)
+        {
+
+        }
+    }
 
 }
