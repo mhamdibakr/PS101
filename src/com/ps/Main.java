@@ -2,6 +2,7 @@ package com.ps;
 
 import java.io.IOException;
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -12,6 +13,17 @@ public class Main {
         String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 
         Arrays.middleRowCol(array2,array2.length);
+        ArrayList<String> F1 = new ArrayList<>();
+        F1.add("McLaren");
+        F1.add("Ferari");
+        F1.add("Red Bull");
+        F1.add("Mercedes");
+        F1.add("Alpine");
+
+        for (String f : F1)
+        {
+            System.out.println(f);
+        }
     }
 }
 
