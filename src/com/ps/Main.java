@@ -12,6 +12,7 @@ public class Main {
         int[][] array55 = {{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};
         String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 
+        Arrays.arrayOps(array);
         Arrays.middleRowCol(array2,array2.length);
         ArrayList<String> F1 = new ArrayList<>();
         F1.add("McLaren");

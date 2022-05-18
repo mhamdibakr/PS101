@@ -51,7 +51,8 @@ public class Arrays
 
     public static void arrayOps(int[] array)
     {
-        int sum = 0, largest = Integer.MIN_VALUE, smallest = Integer.MAX_VALUE;
+
+        int sum = 0, largest = Integer.MIN_VALUE, smallest = Integer.MAX_VALUE, avg;
         for (int i = 0 ; i < array.length ; i++)
         {
             sum += array[i];
@@ -62,10 +63,21 @@ public class Arrays
             if(array[i] < smallest)
                 smallest = array[i];
         }
+        avg = sum / (array.length - 1);
         System.out.println("The sum of all arrays elements is "+sum+" \nThe largest elements of the array is " +largest
-                +" and the smallest is "+smallest);
+                +" and the smallest is "+smallest+"\nThe avreage is "+avg);
     }
 
+    public static void arrayAvg(int[] array)
+    {
+        int avg, sum = 0, size = array.length - 1;
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            sum += array[i];
+        }
+        avg = sum / size;
+        System.out.println("The avrage of this array is : "+avg);
+    }
     public static void cloneArray(int[] array1, int[] array2)
     {
         if(array1.length != array2.length)
@@ -472,10 +484,12 @@ public class Arrays
             {
                 System.out.print(array[midRow][i]+" ");
             }
+            System.out.println();
             for (int i = 0 ; i < array.length ; i++)
             {
                 System.out.print(array[i][midRow]+" ");
             }
+            System.out.println();
         }
     }
 
