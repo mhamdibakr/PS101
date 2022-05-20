@@ -1,5 +1,6 @@
 package com.ps;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Arrays
@@ -490,6 +491,15 @@ public class Arrays
                 System.out.print(array[i][midRow]+" ");
             }
             System.out.println();
+        }
+    }
+
+    public static void printArrayList(ArrayList<String> arrayList)
+    {
+        for (String str : arrayList)
+        {
+            System.out.println(str);
+
         }
     }
 

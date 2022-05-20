@@ -15,16 +15,14 @@ public class Main {
         Arrays.arrayOps(array);
         Arrays.middleRowCol(array2,array2.length);
         ArrayList<String> F1 = new ArrayList<>();
+        F1.sort();
         F1.add("McLaren");
         F1.add("Ferari");
         F1.add("Red Bull");
         F1.add("Mercedes");
         F1.add("Alpine");
 
-        for (String f : F1)
-        {
-            System.out.println(f);
-        }
+        Arrays.printArrayList(F1);
     }
 }
 
