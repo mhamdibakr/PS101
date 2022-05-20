@@ -15,12 +15,16 @@ public class Main {
         Arrays.arrayOps(array);
         Arrays.middleRowCol(array2,array2.length);
         ArrayList<String> F1 = new ArrayList<>();
-        F1.sort();
         F1.add("McLaren");
         F1.add("Ferari");
         F1.add("Red Bull");
         F1.add("Mercedes");
         F1.add("Alpine");
+        F1.add("Aston Martin");
+        F1.add("Alpha Tauri");
+        F1.add("Alpha romeo");
+        F1.add("Williams");
+        F1.add("Haas");
 
         Arrays.printArrayList(F1);
     }
