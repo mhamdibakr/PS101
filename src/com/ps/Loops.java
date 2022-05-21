@@ -276,6 +276,16 @@ public class Loops
         return fibonacciRecursion(number - 1) + fibonacciRecursion(number - 2);
     }
 
+    public static int nthFibonacci(int n)
+    {
+        if(n == 1)
+            return 0;
+        else if(n == 2)
+            return 1;
+        else
+            return nthFibonacci(n - 1) + nthFibonacci(n - 2);
+    }
+
     public static void iIteration(int n)
     {
         double res = 1;
