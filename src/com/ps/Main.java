@@ -13,6 +13,7 @@ public class Main {
         String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 
         System.out.println(Loops.nthFibonacci(9));
+        System.out.println("Just a commit");
     }
 }
 
