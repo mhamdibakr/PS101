@@ -12,11 +12,8 @@ public class Main {
         int[][] array55 = {{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};
         String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 
-        System.out.println(Loops.nthFibonacci(9));
-        for(int i = 0 ; i < 10 ; i++)
-        {
-            System.out.print(i+" ");
-        }
+        ArrayList<String> al = new ArrayList<>();
+        Arrays.fillArrayList(al);
     }
 }
 

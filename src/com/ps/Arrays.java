@@ -503,4 +503,26 @@ public class Arrays
         }
     }
 
+    public static void fillArrayList(ArrayList<String> al)
+    {
+        char choice  = '\0';
+        String input = "\0";
+        Scanner scanner = new Scanner(System.in);
+
+        do
+        {
+         System.out.println("Enter a name :");
+         input = scanner.nextLine();
+         al.add(input);
+
+         System.out.println("enter c to continue or any other key to leave");
+         choice = scanner.nextLine().charAt(0);
+
+        }while (choice == 'c' || choice == 'C');
+
+        printArrayList(al);
+    }
+
+
+
 }
