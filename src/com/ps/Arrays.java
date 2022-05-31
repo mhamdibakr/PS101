@@ -117,6 +117,18 @@ public class Arrays
         printIntArray(array);
     }
 
+    public static void pairingArray(int[] array)
+    {
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            for(int j = 0 ; j < array.length ; j++)
+            {
+                System.out.print(array[i]+","+array[j]+"  ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void linearSearch(int[] array, int number)
     {
         boolean isFound = false;
