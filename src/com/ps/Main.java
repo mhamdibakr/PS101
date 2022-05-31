@@ -12,7 +12,6 @@ public class Main {
         int[][] array55 = {{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};
         String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 
-        Arrays.pairingArray(array);
     }
 }
 

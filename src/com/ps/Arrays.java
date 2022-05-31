@@ -119,6 +119,9 @@ public class Arrays
 
     public static void pairingArray(int[] array)
     {
+        if(array.length <= 1)
+            System.out.println("Pairing cant be performed of an array with size 1");
+
         for(int i = 0 ; i < array.length ; i++)
         {
             for(int j = 0 ; j < array.length ; j++)
@@ -126,6 +129,22 @@ public class Arrays
                 System.out.print(array[i]+","+array[j]+"  ");
             }
             System.out.println();
+        }
+    }
+    public static void nthFibonacciArray(int size)
+    {
+        if(size == 0 || size == 1)
+            System.out.println(size);
+        else
+        {
+            int[] fibArray = new int[size];
+            fibArray[0] = 0;
+            fibArray[1] = 1;
+            for (int i = 2 ; i < size ; i++)
+            {
+                fibArray[i] = fibArray[i - 1] + fibArray[i - 2];
+            }
+            printIntArray(fibArray);
         }
     }
 
@@ -141,7 +160,6 @@ public class Arrays
                 index = i;
                 break;
             }
-
         }
 
         if(isFound)
