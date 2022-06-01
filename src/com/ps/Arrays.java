@@ -524,6 +524,24 @@ public class Arrays
         }
     }
 
+    public static void multiplyingMatrixes(int[][] array1, int[][] array2)
+    {
+        int rows = array1.length, cols = array2[0].length;
+        int[][] array3 = new int[rows][cols];
+
+        for(int i = 0 ; i < array1.length ; i++)
+        {
+            for (int j = 0 ; j < array2[0].length ; j++)
+            {
+                for (int k = 0 ; k < array2.length ; k++)
+                {
+                    array3[i][j] += array1[i][k] * array2[k][j];
+                }
+            }
+        }
+        print2dArray(array3);
+    }
+
     public static void printArrayList(ArrayList<String> arrayList)
     {
         for (String str : arrayList)
