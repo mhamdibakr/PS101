@@ -50,6 +50,15 @@ public class Arrays
         System.out.println();
     }
 
+    public static void printReversedIntArray(int[] array)
+    {
+        for(int i = array.length - 1 ; i >= 0 ; i--)
+        {
+            System.out.print(array[i]+" ");
+        }
+        System.out.println();
+    }
+
     public static void arrayOps(int[] array)
     {
 

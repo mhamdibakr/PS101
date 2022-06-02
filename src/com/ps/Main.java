@@ -12,7 +12,7 @@ public class Main {
         int[][] array55 = {{7, 8}, {9, 10}, {11, 12}};
         String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 
-       Arrays.multiplyingMatrixes(array2,array55);
+       Arrays.printReversedIntArray(array);
     }
 }
 
