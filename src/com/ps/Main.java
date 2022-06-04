@@ -13,7 +13,7 @@ public class Main {
         String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 
 
-       int[] res = ArraysTwo.twoNumberSumvV2(array,10);
+       int[] res = ArraysTwo.twoNumberSumV3(array,10);
        Arrays.printIntArray(res);
     }
 }
