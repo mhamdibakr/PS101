@@ -1,7 +1,7 @@
 package com.ps;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
+import java.util.Arrays;
 
 public class ArraysTwo
 {
@@ -17,27 +17,24 @@ public class ArraysTwo
         you can assume that there will be at most one pair of numbers summing up the target sum.
     */
 
-    public static void twoNumberSum(int[] array, int n)
+
+    // time : O(n^2) | space : O(1)
+    public static int[] twoNumberSum(int[] array, int n)
     {
-        int[] res = new int[2];
-        if(array.length <= 1)
-            System.out.println("cant perform this op");
-        else
-        {
             for (int i = 0; i < array.length; i++)
             {
                 for (int j = 0; j < array.length; j++)
                 {
                     if (array[i] + array[j] == n && i != j)
                     {
-                        res = new int[]{array[i], array[j]};
+                       return new int[] { array[i], array[j] };
                     }
                 }
             }
-        }
-        Arrays.printIntArray(res);
+       return new int[0];
     }
 
+    // time : O(n) | space : O(n)
     public static int[] twoNumberSumvV2(int[] array, int n)
     {
         Set<Integer> nums = new HashSet<>();
@@ -56,22 +53,40 @@ public class ArraysTwo
         return new int[0];
     }
 
+    // time : O(n log n) | space : O(1)
     public static int[] twoNumberSumV3(int[] array, int n)
     {
-        java.util.Arrays.sort(array);
+        Arrays.sort(array);
+
         int left  = 0;
         int right = array.length - 1;
-
-        while (left < right)
+        int currentSum = '\0';
+        while(left < right)
         {
-            int currentSum = array[left] + array[right];
+            currentSum = array[left] + array[right];
             if(currentSum == n)
-                return new int[] {array[left],array[right]};
+                return new int[] {array[left], array[right]};
             else if(currentSum < n)
                 left++;
             else if(currentSum > n)
                 right++;
         }
         return new int[0];
+    }
+
+
+    public static void validateSubsequence(List<Integer> array, List<Integer> subSeq)
+    {
+        ArrayList<Integer> res = new ArrayList<>();
+        for (Integer num : array)
+        {
+            if (subSeq.contains(num))
+                res.add(num);
+        }
+
+       if(res.equals(subSeq))
+           System.out.println("True that mf");
+       else
+           System.out.println("False");
     }
 }
