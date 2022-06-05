@@ -54,26 +54,36 @@ public class ArraysTwo
     }
 
     // time : O(n log n) | space : O(1)
-    public static int[] twoNumberSumV3(int[] array, int n)
-    {
+    public static int[] twoNumberSumV3(int[] array, int n) {
         Arrays.sort(array);
 
-        int left  = 0;
+        int left = 0;
         int right = array.length - 1;
         int currentSum = '\0';
-        while(left < right)
-        {
+        while (left < right) {
             currentSum = array[left] + array[right];
-            if(currentSum == n)
-                return new int[] {array[left], array[right]};
-            else if(currentSum < n)
+            if (currentSum == n)
+                return new int[]{array[left], array[right]};
+            else if (currentSum < n)
                 left++;
-            else if(currentSum > n)
+            else if (currentSum > n)
                 right++;
         }
         return new int[0];
     }
 
+
+    /*
+        Given two non-empty arrays of integers, write a function that
+        determines whether the second array is a subsequence of the first one.
+
+        A subsequence of an array is a set of numbers that aren't necessarily adjacent in the array
+        but that are in the same order as they appear in the array.
+
+        For instance the numbers [1, 3, 4] are a subsequence of the array [1, 2, 3, 4] so do the numbers [2, 4]
+
+        Note that a single number in the array and the array it self are both valid subsequences of the array.
+    * */
 
     public static void validateSubsequence(List<Integer> array, List<Integer> subSeq)
     {
@@ -88,5 +98,17 @@ public class ArraysTwo
            System.out.println("True that mf");
        else
            System.out.println("False");
+    }
+
+
+    public static void sortedSquaredArray(int[] array)
+    {
+        int[] squaredArray = new int[array.length];
+        for (int i = 0 ; i < array.length ; i++)
+        {
+            squaredArray[i] = Loops.powerSquared(array[i]);
+        }
+
+        com.ps.Arrays.printIntArray(squaredArray);
     }
 }

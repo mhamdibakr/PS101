@@ -248,7 +248,7 @@ public class Loops
     public static int powerSquared(int number)
     {
         int res = 1;
-        for (int i = 0 ; i < 3 ; i++)
+        for (int i = 0 ; i < 2 ; i++)
         {
             res *= number;
         }
