@@ -9,11 +9,11 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        List<Integer> array = Arrays.asList(new Integer[] {1,1,1,1,1});
-        List<Integer> sub   = Arrays.asList(new Integer[] {1,1,1});
+        List<Integer> array = Arrays.asList(new Integer[] {5,1,22,25,6,-1,8,10});
+        List<Integer> sub   = Arrays.asList(new Integer[] {1,6,-1,9});
 
-        int[] sArray = {1,2,3,5,6,8,9};
+        int[] sArray = {1,2,3,-5,6,8,9};
 
-        ArraysTwo.validateSubsequenceV2(array,sub);
+        ArraysTwo.sortedSquaredArray(sArray);
 }}
 

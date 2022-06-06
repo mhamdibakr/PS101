@@ -101,6 +101,7 @@ public class ArraysTwo
             System.out.println("False");
     }
 
+    // time : O(n) | space : O(1)
     public static void validateSubsequenceV2(List<Integer> array, List<Integer> subSeq)
     {
         int iarray = 0, isubSeq = 0;
@@ -116,9 +117,37 @@ public class ArraysTwo
             System.out.println("False");
     }
 
+    // time : O(n) | space : O(1)
+    public static boolean validateSubsequenceV3(List<Integer> array, List<Integer> subSeq)
+    {
+        int isub = 0;
+        for (int i = 0; i < array.size(); i++)
+        {
+            if(isub == subSeq.size()){
+                break;
+            }
+            if(array.get(i).equals(subSeq.get(isub))){
+                isub++;
+            }
+        }
+        return isub == subSeq.size();
+    }
 
+
+    /*
+        Write a function  that takes in non-empty array of integers that are sorted in ascending order
+        and returns a new array of the same lengh with the squares of the orignal integers also sorted in ascendng order.
+    */
+
+    // time : O( n log n) : space : O(n)
     public static void sortedSquaredArray(int[] array)
     {
-       // needs to be redone
+        int[] squaredArray = new int[array.length];
+        for (int i = 0 ; i < array.length ; i++)
+        {
+            squaredArray[i] = array[i] * array[i];
+        }
+        Arrays.sort(squaredArray);
+        com.ps.Arrays.printIntArray(squaredArray);
     }
 }
