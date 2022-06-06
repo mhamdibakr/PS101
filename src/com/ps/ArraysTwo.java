@@ -85,6 +85,7 @@ public class ArraysTwo
         Note that a single number in the array and the array it self are both valid subsequences of the array.
     * */
 
+    // time : O(n) | space : O(n)
     public static void validateSubsequence(List<Integer> array, List<Integer> subSeq)
     {
         ArrayList<Integer> res = new ArrayList<>();
@@ -94,21 +95,30 @@ public class ArraysTwo
                 res.add(num);
         }
 
-       if(res.equals(subSeq))
-           System.out.println("True that mf");
-       else
-           System.out.println("False");
+        if(res.equals(subSeq))
+            System.out.println("True");
+        else
+            System.out.println("False");
+    }
+
+    public static void validateSubsequenceV2(List<Integer> array, List<Integer> subSeq)
+    {
+        int iarray = 0, isubSeq = 0;
+        while(iarray < array.size() && isubSeq < subSeq.size())
+        {
+            if(array.get(iarray).equals(subSeq.get(isubSeq)))
+            { isubSeq++; }
+            iarray++;
+        }
+        if(isubSeq == subSeq.size())
+            System.out.println("True that mf");
+        else
+            System.out.println("False");
     }
 
 
     public static void sortedSquaredArray(int[] array)
     {
-        int[] squaredArray = new int[array.length];
-        for (int i = 0 ; i < array.length ; i++)
-        {
-            squaredArray[i] = Loops.powerSquared(array[i]);
-        }
-
-        com.ps.Arrays.printIntArray(squaredArray);
+       // needs to be redone
     }
 }
