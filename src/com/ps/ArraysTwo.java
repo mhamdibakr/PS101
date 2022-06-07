@@ -6,6 +6,7 @@ import java.util.Arrays;
 public class ArraysTwo
 {
     /*
+        Q1
         write a function that takes in a non-empty array of distinct intigers
         and a single integer representing a target sum. if any two numbers in the input
         array sum up to the target sum, the function then should return them in an arraym in any order.
@@ -16,7 +17,6 @@ public class ArraysTwo
 
         you can assume that there will be at most one pair of numbers summing up the target sum.
     */
-
 
     // time : O(n^2) | space : O(1)
     public static int[] twoNumberSum(int[] array, int n)
@@ -56,24 +56,24 @@ public class ArraysTwo
     // time : O(n log n) | space : O(1)
     public static int[] twoNumberSumV3(int[] array, int n) {
         Arrays.sort(array);
-
-        int left = 0;
-        int right = array.length - 1;
-        int currentSum = '\0';
-        while (left < right) {
-            currentSum = array[left] + array[right];
-            if (currentSum == n)
-                return new int[]{array[left], array[right]};
-            else if (currentSum < n)
+        int left = 0 , right = array.length - 1;
+        while (left < right)
+        {
+            int currentSum = array[left] + array[right];
+            if(currentSum == n)
+                return new int[] {array[left],array[right]};
+            else if(currentSum < n)
                 left++;
-            else if (currentSum > n)
+            else if(currentSum > n)
                 right++;
         }
-        return new int[0];
+
+        return new int[] {};
     }
 
 
     /*
+        Q2
         Given two non-empty arrays of integers, write a function that
         determines whether the second array is a subsequence of the first one.
 
@@ -135,11 +135,12 @@ public class ArraysTwo
 
 
     /*
+        Q3
         Write a function  that takes in non-empty array of integers that are sorted in ascending order
         and returns a new array of the same lengh with the squares of the orignal integers also sorted in ascendng order.
     */
 
-    // time : O( n log n) : space : O(n)
+    // time : O(n log n) : space : O(n)
     public static void sortedSquaredArray(int[] array)
     {
         int[] squaredArray = new int[array.length];
