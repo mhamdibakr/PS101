@@ -151,4 +151,26 @@ public class ArraysTwo
         Arrays.sort(squaredArray);
         com.ps.Arrays.printIntArray(squaredArray);
     }
+
+
+    public static void sortedSquaredArrayV2(int [] array)
+    {
+        int[] squaredArray = new int[array.length];
+        int smallestIdx = 0, largestIdx = array.length - 1;
+        for(int i = array.length - 1 ; i >= 0 ; i--)
+        {
+            int smallestValue = array[smallestIdx] , largestValue = array[largestIdx];
+            if(Math.abs(smallestValue) > Math.abs(largestValue))
+            {
+                squaredArray[i] = smallestValue * smallestValue;
+                smallestIdx++;
+            }
+            else
+            {
+                squaredArray[i] = largestValue * largestValue;
+                largestIdx--;
+            }
+        }
+        com.ps.Arrays.printIntArray(squaredArray);
+    }
 }
