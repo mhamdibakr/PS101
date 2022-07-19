@@ -17,6 +17,36 @@ public class ArraysTwo
 
         you can assume that there will be at most one pair of numbers summing up the target sum.
     */
+        public static int[] twoNumberSum(int[] array, int target)
+        {
+            for(int i = 0; i < array.length ; i++)
+            {
+                for(int k = i+1; k < array.length ; k++)
+                {
+                    if(array[i] + array[k] == target)
+                        return new int[] {array[i], array[k]};
+                }
+            }
+            return new int[0];
+        }
+
+        public static int[] twoNUmberSum2(int[] array, int target)
+        {
+            Arrays.sort(array);
+            int left = 0, right = array.length - 1;
+
+            while (left < right)
+            {
+                int sum = array[left] + array[right];
+                if(sum < target)
+                    left++;
+                else if(sum > target)
+                    right++;
+                else if(sum == target)
+                    return new int[] {array[left], array[right]};
+            }
+            return new int[0];
+        }
 
 
 

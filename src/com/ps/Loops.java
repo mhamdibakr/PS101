@@ -292,7 +292,7 @@ public class Loops
         for(int i = 2 ; i <= n ; i++)
         {
             res += (double) 1 / i ;
-            String formattedString = String.format("%.04f", res);
+            String formattedString = String.format("%.05f", res);
             System.out.print(formattedString+" ");
         }
     }
