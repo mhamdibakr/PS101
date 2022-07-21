@@ -48,7 +48,19 @@ public class ArraysTwo
             return new int[0];
         }
 
-
+        public static int[] twoNumberSum3(int[] array, int targer)
+        {
+            List<Integer> list = new ArrayList<>();
+            for (int number : array)
+            {
+                int pm = targer - number;
+                if(list.contains(pm))
+                    return new int[]{number, pm};
+                else
+                    list.add(number);
+            }
+            return new int[0];
+        }
 
     /*
         Q2
@@ -62,6 +74,35 @@ public class ArraysTwo
 
         Note that a single number in the array and the array it self are both valid subsequences of the array.
     */
+
+    public static boolean isValidSubsequence(List<Integer> array, List<Integer> subSeq)
+    {
+        int iSub = 0;
+        for(int i = 0 ; i < array.size() ; i++)
+        {
+            if(iSub == subSeq.size())
+                break;
+
+            if(array.get(i).equals(subSeq.get(iSub)))
+                iSub++;
+        }
+
+        return iSub == subSeq.size();
+    }
+
+    public static boolean isValidSubsequenceV2(List<Integer> array, List<Integer> subSeq)
+    {
+        int iArr = 0 , iSub = 0;
+        while (iArr < array.size() && iSub < subSeq.size())
+        {
+            if(array.get(iArr).equals(subSeq.get(iSub)))
+                iSub++;
+
+            iArr++;
+        }
+        return iSub == subSeq.size();
+    }
+
 
 
 

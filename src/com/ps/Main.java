@@ -7,11 +7,13 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        int[] sArray = {3,5,-4,8,11,1,-1,6};
-        int[] sArray2 = {-5, -4, -3, -2, -1};
+        int[] sArray = {1,2,3,4};
+        int[] sArray2 = {1,2,4};
 
-        int[] array = ArraysTwo.twoNUmberSum2(sArray,10);
-        Arrays.printIntArray(array);
+        List<Integer> array = List.of(1, 2, 3, 4);
+        List<Integer> sub = List.of(1, 4, 4);
+
+        System.out.println(ArraysTwo.isValidSubsequenceV2(array,sub));
 
 
     }
