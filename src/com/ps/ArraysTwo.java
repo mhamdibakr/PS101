@@ -102,15 +102,45 @@ public class ArraysTwo
         }
         return iSub == subSeq.size();
     }
-
-
-
-
     /*
         Q3
         Write a function  that takes in non-empty array of integers that are sorted in ascending order
         and returns a new array of the same lengh with the squares of the orignal integers also sorted in ascendng order.
     */
 
-// regular commit
+    public static int[] sortedSquaredArray(int[] array)
+    {
+        int[] squaredArray = new int[array.length];
+
+        Arrays.sort(array);
+        for (int i = 0 ; i < array.length ; i++)
+        {
+            squaredArray[i] = (int) Math.pow(Math.abs(array[i]),2);
+        }
+        Arrays.sort(squaredArray);
+        return squaredArray;
+    }
+
+    public static int[] sortedSquaredArrayV2(int[] array)
+    {
+        int[] newArray = new int[array.length];
+        Arrays.sort(array);
+
+        int leftIdx = 0, rightIdx = array.length - 1;
+        for(int i = array.length - 1; i >= 0  ; i--)
+        {
+            int largestValue = array[rightIdx], smallestValue = array[leftIdx];
+            if(Math.abs(smallestValue) > Math.abs(largestValue))
+            {
+                newArray[i] = smallestValue * smallestValue ;
+                leftIdx++;
+            }
+            else
+            {
+                newArray[i] = largestValue * largestValue;
+                rightIdx--;
+            }
+        }
+        return newArray;
+    }
 }
